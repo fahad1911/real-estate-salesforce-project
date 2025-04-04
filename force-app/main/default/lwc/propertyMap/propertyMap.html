@@ -1,0 +1,39 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-31-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Property Listings">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Location" value={locationFilter} onchange={handleLocationChange}></lightning-input>
+            <lightning-input type="number" label="Minimum Price" value={minPrice} onchange={handleMinPriceChange}></lightning-input>
+            <lightning-input type="number" label="Maximum Price" value={maxPrice} onchange={handleMaxPriceChange}></lightning-input>
+            <lightning-button label="Search" onclick={fetchProperties}></lightning-button>
+            <lightning-button label="Reset" variant="neutral" onclick={resetValues} class="slds-m-top_medium"></lightning-button>
+            <template if:true={errorMessage}>
+                <p class="slds-text-color_error slds-m-top_medium">{errorMessage}</p>
+            </template>
+        </div>
+
+        <!-- Map Display -->
+        <lightning-map map-markers={mapMarkers} zoom-level="10" list-view="visible"></lightning-map>
+
+        <!-- Property List -->
+        <template if:true={properties.length}>
+            <ul class="slds-m-around_medium">
+                <template for:each={properties} for:item="property">
+                    <li key={property.Id} class="slds-box slds-m-bottom_small">
+                        <p><strong>{property.Name}</strong></p>
+                        <p>Location: {property.Locality__c}</p>
+                        <p>Price: ${property.Price__c}</p>
+                        <p>Area: {property.Area_size__c}</p>
+                        <p>Type: {property.Type_of_Property__c}</p>
+                    </li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+</template>
