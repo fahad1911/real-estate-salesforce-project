@@ -10,7 +10,7 @@ A Salesforce-based application designed to manage property listings, customer in
   Create, update, and filter real estate properties based on location, price, and availability.
 
 📌 **Interactive Map Integration**  
-  Display property locations on a map with markers, price, type, and size information using static locality-coordinate mapping.
+  Display property locations on a map with markers, price, type, and size information using static JSON mapping with localities of the area.
 
 💬 **Inquiry Tracking & Notifications**  
   Record customer inquiries, trigger status changes on properties, and send automated emails to customers and property managers.
