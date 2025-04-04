@@ -1,18 +1,46 @@
-# Salesforce DX Project: Next Steps
+🏡 Real Estate Property Listing System - Salesforce Project
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+A Salesforce-based application designed to manage property listings, customer inquiries, and sales processes for a real estate business. It provides both backend automation and a modern frontend experience using LWC and Visualforce.
 
-## How Do You Plan to Deploy Your Changes?
+---
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+🚀 Features
 
-## Configure Your Salesforce DX Project
+🔍 **Property Listing Management**  
+  Create, update, and filter real estate properties based on location, price, and availability.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+📌 **Interactive Map Integration**  
+  Display property locations on a map with markers, price, type, and size information using static locality-coordinate mapping.
 
-## Read All About It
+💬 **Inquiry Tracking & Notifications**  
+  Record customer inquiries, trigger status changes on properties, and send automated emails to customers and property managers.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+📊 **Reporting & Dashboards**  
+  Generate visual reports based on property status, inquiries, and sales performance by agent.
+
+---
+
+🛠️ Tech Stack
+
+- **Salesforce Platform**
+  - Custom Objects (Property, Inquiry)
+  - Validation Rules
+  - Apex Classes & Triggers
+  - Flow & Workflow Automation
+  - Reports & Dashboards
+
+- **Frontend**
+  - Lightning Web Components (LWC)
+  - static JSON mapping for localities to coordinates
+
+- **Dev Tools**
+  - VS Code + Salesforce Extensions
+  - SFDX CLI
+  - Git + GitHub
+
+## Highlights
+
+- Used LWC to create an interactive, filterable property map using static JSON locality-to-coordinate mapping.
+- Built Apex logic to manage property status updates via trigger & integration with Opportunities.
+- Designed automated customer communication using Flow and unsold property alerts using Workflow Rules.
+
